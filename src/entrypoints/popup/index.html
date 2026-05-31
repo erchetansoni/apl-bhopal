@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Scraper</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>LinkedIn Scraper</h1>
+        <button id="helpBtn" class="icon-btn" title="How to use">?</button>
+      </header>
+
+      <div id="helpSection" class="hidden">
+        <p>1. Go to a LinkedIn page with cards (e.g., Search, Connections).</p>
+        <p>2. Set the limit of cards to scrape.</p>
+        <p>3. Click "Start Scraping".</p>
+      </div>
+
+      <div class="controls" style="flex-direction: column; align-items: flex-start; gap: 4px;">
+        <label for="keywords">Keywords:</label>
+        <input type="text" id="keywords" placeholder="e.g. job ai ml" style="width: 100%; box-sizing: border-box; padding: 6px; border: 1px solid #ccc; border-radius: 4px;" />
+      </div>
+
+      <div class="controls">
+        <label for="limit">Card Limit:</label>
+        <input type="number" id="limit" value="10" min="1" max="1000" />
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="primary">Start Scraping</button>
+        <button id="stopBtn" class="danger hidden">Stop Scraping</button>
+      </div>
+
+      <div class="exports">
+        <button id="exportCsvBtn" disabled>Export CSV</button>
+        <button id="exportJsonBtn" disabled>Export JSON</button>
+      </div>
+
+      <div class="logs">
+        <label>Logs:</label>
+        <textarea id="logArea" readonly></textarea>
+      </div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
