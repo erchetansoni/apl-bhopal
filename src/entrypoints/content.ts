@@ -3,7 +3,7 @@ import { defineContentScript } from 'wxt/sandbox';
 export default defineContentScript({
   matches: ['*://*.linkedin.com/*'],
   main() {
-    console.log('LinkedIn Scraper content script loaded.');
+    console.log('Job Wizard content script loaded.');
 
     let isScraping = false;
 

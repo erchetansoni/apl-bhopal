@@ -4,6 +4,7 @@ import { defineConfig } from 'wxt';
 export default defineConfig({
   srcDir: 'src',
   manifest: {
+    name: 'Job Wizard',
     permissions: ['activeTab', 'scripting', 'storage', 'tabs'],
     host_permissions: ['*://*.linkedin.com/*']
   }

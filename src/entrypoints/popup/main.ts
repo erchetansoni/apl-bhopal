@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   exportJsonBtn.addEventListener("click", () => {
     if (scrapedData.length === 0) return;
     const content = JSON.stringify(scrapedData, null, 2);
-    downloadFile(content, "linkedin_data.json", "application/json");
+    downloadFile(content, "job_wizard_data.json", "application/json");
     log("Exported as JSON.");
   });
 
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const content = csvRows.join("\n");
-    downloadFile(content, "linkedin_data.csv", "text/csv");
+    downloadFile(content, "job_wizard_data.csv", "text/csv");
     log("Exported as CSV.");
   });
 
